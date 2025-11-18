@@ -17,10 +17,7 @@ typedef struct node {
    if(NULL == temp)
       return NULL;
 
-    // int data;
-    // printf("Enter the data what you want to store in node ..\n");
-    // scanf("%d",&data);
-    
+   
     temp->data = data;
     temp->lchild =NULL;
     temp->rchild =NULL;
@@ -44,8 +41,7 @@ treenode* insertNode(treenode* t, int value){
     if( t == NULL ) {
         return initializenode(value);
     }
-    treenode* temp;
-    temp=initializenode(value);
+   
     if( value < t->data ) {
         t->lchild = insertNode(t->lchild, value);
         t->lchild->parent = t;

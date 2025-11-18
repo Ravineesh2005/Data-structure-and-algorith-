@@ -29,8 +29,7 @@ typedef struct node {
     if( t == NULL ) {
         return initializenode(value);
     }
-    treenode* temp;
-    temp=initializenode(value);
+
     if( value < t->data ) {
         t->lchild = insertNode(t->lchild, value);
         t->lchild->parent = t;

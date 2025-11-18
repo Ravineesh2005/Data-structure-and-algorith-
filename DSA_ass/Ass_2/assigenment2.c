@@ -22,7 +22,7 @@ int pushintstack(Stack *s, int value ) {
     s->StackElement[s->StackCount] = value;
     printf("Pushed %d onto stack at index %d\n", value, s->StackCount );
     s->StackCount++;
-    return value;
+    return 1;
 }
 
 int* popintstack(Stack *s ,int *value ) {

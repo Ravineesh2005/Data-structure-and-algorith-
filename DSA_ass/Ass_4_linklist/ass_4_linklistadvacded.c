@@ -6,10 +6,10 @@
 typedef struct largenumber{
     int digit;
     struct largenumber* next;
-}numbernode;
+}node;
 
-numbernode* addnumberNode(numbernode* num, int d){
-    numbernode* temp = (numbernode*)malloc(sizeof(numbernode));
+node* addnumberNode(node* num, int d){
+    node* temp = (node*)malloc(sizeof(node));
     if(temp == NULL)
         return NULL;
     temp->digit = d; temp->next = NULL;
@@ -17,7 +17,7 @@ numbernode* addnumberNode(numbernode* num, int d){
     if(num==NULL)
         return temp;
     
-    numbernode* ptr= num;
+    node* ptr= num;
     while(ptr->next!=NULL)
         ptr=ptr->next;
     ptr->next=temp;

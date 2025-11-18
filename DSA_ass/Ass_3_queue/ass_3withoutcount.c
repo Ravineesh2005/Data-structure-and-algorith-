@@ -109,7 +109,7 @@ int isIntegerQueueEmpty(queue *q) {
 
 int isIntegerQueueFull(queue *q) {
     if (q == NULL) {
-        return 1;
+        return 0;
     }
     return ((q->rear + 1) % q->maxSize == q->front);
 }
